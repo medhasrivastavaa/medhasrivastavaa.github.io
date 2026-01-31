@@ -27,14 +27,14 @@ const Hero: React.FC = () => {
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         className="max-w-6xl"
       >
-        <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif leading-[0.9] tracking-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[0.9] tracking-tight">
           Medha <br />
         </h1>
 
-        <div className="mt-12 md:mt-20 flex items-center space-x-4">
+        <div className="mt-8 md:mt-12 flex items-center space-x-4">
           <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-          <p className="font-mono text-sm md:text-base opacity-70">
-            Live Pulse: <span className="text-[#1a1a1a]">{statuses[pulseIndex]}</span>
+          <p className="font-mono text-xs md:text-sm opacity-70">
+            <span className="text-[#1a1a1a]">{statuses[pulseIndex]}</span>
             <span className="inline-block w-2 h-4 bg-[#1a1a1a] ml-2 animate-blink" />
           </p>
         </div>

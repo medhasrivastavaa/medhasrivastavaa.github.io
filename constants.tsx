@@ -6,11 +6,10 @@ export const PROJECTS: Project[] = [
   {
     id: 'worldsense',
     number: '01',
-    title: 'WorldSense: Gamified General Knowledge App',
+    title: 'IRLSense: Gamified Active Knowledge App',
     description: 'A full-stack agentic platform that autonomously retrieves global news, curates insights, and generates interactive quizzes using LLM chains.',
     tech: ['LangChain', 'OpenAI', 'Next.js', 'Supabase'],
     category: 'application',
-    imageUrl: '/images/worldsense-screenshot.png',
     githubUrl: '#' // Update with actual URL
   },
   {

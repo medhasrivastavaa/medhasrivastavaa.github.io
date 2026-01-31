@@ -19,23 +19,23 @@ const ProjectStack: React.FC = () => {
     >
       {/* Project Info */}
       <div className="lg:col-span-5 pb-8">
-        <span className="font-mono text-xl md:text-2xl opacity-40 mb-4 block">
+        <span className="font-mono text-base md:text-lg opacity-40 mb-3 block">
           {project.number}
         </span>
-        <h2 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
+        <h2 className="text-2xl md:text-4xl font-serif mb-4 leading-tight">
           {project.title}
         </h2>
         {project.year && project.venue && (
-          <p className="text-sm font-mono text-gray-500 mb-4">
+          <p className="text-xs font-mono text-gray-500 mb-3">
             {project.venue} • {project.year}
           </p>
         )}
-        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-md leading-relaxed">
+        <p className="text-base md:text-lg text-gray-600 mb-6 max-w-md leading-relaxed">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tech.map((t) => (
-            <span key={t} className="px-3 py-1 bg-gray-100 text-xs font-mono rounded-full uppercase tracking-wider">
+            <span key={t} className="px-2.5 py-0.5 bg-gray-100 text-[10px] font-mono rounded-full uppercase tracking-wider">
               {t}
             </span>
           ))}
@@ -46,12 +46,12 @@ const ProjectStack: React.FC = () => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-lg font-medium group relative overflow-hidden"
+              className="inline-flex items-center space-x-2 text-sm font-medium group relative overflow-hidden"
             >
               <span className="relative z-10 group-hover:bg-[#fef08a] transition-colors duration-300">
                 View Demo
               </span>
-              <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
           )}
           {project.githubUrl && (
@@ -59,12 +59,12 @@ const ProjectStack: React.FC = () => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-lg font-medium group relative overflow-hidden"
+              className="inline-flex items-center space-x-2 text-sm font-medium group relative overflow-hidden"
             >
               <span className="relative z-10 group-hover:bg-[#fef08a] transition-colors duration-300">
                 {project.category === 'research' ? 'View Research' : 'View Code'}
               </span>
-              <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
           )}
         </div>
@@ -111,12 +111,12 @@ const ProjectStack: React.FC = () => {
     <>
       {/* Projects Section */}
       {applications.length > 0 && (
-        <section id="projects" className="mt-40">
-          <div className="px-6 md:px-20 mb-20">
-            <h2 className="text-5xl md:text-7xl font-serif mb-4">Projects</h2>
+        <section id="projects" className="mt-32">
+          <div className="px-6 md:px-20 mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif mb-3">Projects</h2>
             {/* <p className="text-xl text-gray-500 max-w-2xl">Personal projects and applications</p> */}
           </div>
-          <div className="space-y-40 md:space-y-60">
+          <div className="space-y-32 md:space-y-40">
             {applications.map(renderProject)}
           </div>
         </section>
@@ -124,12 +124,12 @@ const ProjectStack: React.FC = () => {
 
       {/* Research Section */}
       {research.length > 0 && (
-        <section id="research" className="mt-40">
-          <div className="px-6 md:px-20 mb-20">
-            {/* <h2 className="text-5xl md:text-7xl font-serif mb-4">Research Projects</h2> */}
-            <p className="text-xl text-gray-500 max-w-2xl">Research Projects</p>
+        <section id="research" className="mt-32">
+          <div className="px-6 md:px-20 mb-16">
+            {/* <h2 className="text-3xl md:text-5xl font-serif mb-3">Research Projects</h2> */}
+            <p className="text-lg text-gray-500 max-w-2xl">Research Projects</p>
           </div>
-          <div className="space-y-40 md:space-y-60">
+          <div className="space-y-32 md:space-y-40">
             {research.map(renderProject)}
           </div>
         </section>

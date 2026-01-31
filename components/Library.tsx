@@ -8,28 +8,28 @@ const Library: React.FC = () => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section className="mt-60 px-6 md:px-20 mb-60">
-      <div className="flex items-center justify-between mb-20 border-b border-gray-200 pb-8">
-        <h2 className="text-3xl md:text-5xl font-serif">The Library</h2>
-        <span className="font-mono text-sm opacity-50 uppercase tracking-widest">Research & Papers</span>
+    <section className="mt-40 px-6 md:px-20 mb-40">
+      <div className="flex items-center justify-between mb-16 border-b border-gray-200 pb-6">
+        <h2 className="text-2xl md:text-4xl font-serif">The Library</h2>
+        <span className="font-mono text-xs opacity-50 uppercase tracking-widest">Research & Papers</span>
       </div>
 
       <div className="space-y-0 relative">
         {PAPERS.map((paper) => (
           <div
             key={paper.id}
-            className="group relative border-b border-gray-100 py-12 cursor-pointer transition-colors hover:bg-white"
+            className="group relative border-b border-gray-100 py-8 cursor-pointer transition-colors hover:bg-white"
             onMouseEnter={() => setHoveredId(paper.id)}
             onMouseLeave={() => setHoveredId(null)}
           >
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
               <div className="flex-1">
-                <span className="font-mono text-xs opacity-40 uppercase mb-2 block">{paper.venue}</span>
-                <h3 className="text-2xl md:text-4xl font-serif group-hover:pl-4 transition-all duration-300">
+                <span className="font-mono text-[10px] opacity-40 uppercase mb-1 block">{paper.venue}</span>
+                <h3 className="text-xl md:text-2xl font-serif group-hover:pl-4 transition-all duration-300">
                   {paper.title}
                 </h3>
               </div>
-              <span className="font-mono text-lg opacity-40">{paper.year}</span>
+              <span className="font-mono text-sm opacity-40">{paper.year}</span>
             </div>
 
             {/* Abstract Preview Box */}
